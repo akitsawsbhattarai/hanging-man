@@ -130,15 +130,18 @@ def hangman_main():
     for i in mainword:
         guessed_word +="_ "
     
-    print(*['_'for i in mainword], sep=' ', end='')
-    print()
+    # print(*['_'for i in mainword], sep=' ', end='')
+    # print()
      
     chance = 6
     already_guessed = False
     
     while len(stored_word)> 0 and chance>0:
         print()
-                    
+        print(*['_'for i in mainword], sep=' ', end='') 
+        print()     
+        print()     
+        print()     
         print(colored(f'you have {chance} chance left'))
         print(hanging_man(chance)) 
         print(colored(f'match word: {matchedguessedword}','green'))
@@ -191,7 +194,7 @@ def hangman_main():
     if guessed_word.replace(' ','') == mainword:   
         print(colored('whoa! you made it!','green'))
     else :
-        print(colored(f'Sorry! you are hanged! the correct word is {mainword}','red'))
+        print(colored(f'Sorry! you are hanged! The correct word is {mainword}','red'))
         
  
 def play_game(): 
